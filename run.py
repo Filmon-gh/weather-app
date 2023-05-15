@@ -1,3 +1,6 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# Import the required modules
+from tkinter import *  # Import the tkinter module for GUI
+from datetime import datetime  # Import the datetime module for working with dates and times
+import json  # Import the json module for working with JSON data
+import requests  # Import the requests module for making HTTP requests
+
