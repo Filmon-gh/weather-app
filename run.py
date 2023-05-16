@@ -16,31 +16,42 @@ def get_weather_data(city_name):
     return response.json()
 
 def display_weather_data(weather_data):
-    # Accessing specific weather data
-    temperature_kelvin = weather_data['main']['temp']
-    temperature_celsius = temperature_kelvin - 273.15
-    humidity = weather_data['main']['humidity']
-    description = weather_data['weather'][0]['description']
-    wind_speed = weather_data['wind']['speed']
-    
-    # Printing weather data using f-strings
-    print(f"City: {city_name}")
-    print(f"Temperature: {temperature_celsius:.2f} °C")
-    print(f"Humidity: {humidity}%")
-    print(f"Description: {description}")
-    print(f"Wind Speed: {wind_speed} m/s")
-
-    # Additional if-else statements for diverse weather conditions
-    if 'rain' in description.lower():
-        print("\nRemember to bring an umbrella!\n")
-    elif 'cloud' in description.lower():
-        print("\nIt's a cloudy day.\n")
-    elif temperature_celsius > 25:
-        print("\nIt's hot outside. Stay hydrated!\n")
-    elif temperature_celsius < 5:
-        print("\nIt's cold outside. Bundle up!\n")
+    if 'cod' in weather_data and weather_data['cod'] != 200:
+        print(f"Error: {weather_data['message']}")
     else:
-        print("\nEnjoy the weather!\n")
+        try:
+            # Accessing specific weather data
+            temperature_kelvin = weather_data['main']['temp']
+            temperature_celsius = temperature_kelvin - 273.15
+            humidity = weather_data['main']['humidity']
+            description = weather_data['weather'][0]['description']
+            wind_speed = weather_data['wind']['speed']
+        
+            # Get the current date
+            current_date = datetime.now().strftime('%Y-%m-%d')
+
+            # Printing weather data using f-strings
+            print(f"City: {city_name}")
+            print(f"Date: {current_date}")
+            print(f"Temperature: {temperature_celsius:.2f} °C")
+            print(f"Humidity: {humidity}%")
+            print(f"Description: {description}")
+            print(f"Wind Speed: {wind_speed} m/s")
+
+            # Additional if-else statements for diverse weather conditions
+            if 'rain' in description.lower():
+                print("\nRemember to bring an umbrella!\n")
+            elif 'cloud' in description.lower():
+                print("\nIt's a cloudy day.\n")
+            elif temperature_celsius > 25:
+                print("\nIt's hot outside. Stay hydrated!\n")
+            elif temperature_celsius < 5:
+                print("\nIt's cold outside. Bundle up!\n")
+            else:
+                print("\nEnjoy the weather!\n")
+        except KeyError:
+            print("Invalid weather data. Unable to display.")
+            
 
 
 city_name = input("Enter your city: ") # Prompt the user to enter their desired city name
