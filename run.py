@@ -47,8 +47,14 @@ city_name = input("Enter your city: ") # Prompt the user to enter their desired 
 weather_data = get_weather_data(city_name) # Retrieve the weather data for the specified city
 display_weather_data(weather_data) # Display the weather data on the console
 
+# Continuously prompts the user to enter a new city name and retrieves and displays the weather data for the entered city.
+# The loop continues until the user enters 'q' to quit.q
 
-
-
-
+while True:
+    option = input("Enter a new city (or 'q' to quit): ")
+    if option.lower() == 'q':
+        break
+    city_name = option
+    weather_data = get_weather_data(city_name)
+    display_weather_data(weather_data)
 
