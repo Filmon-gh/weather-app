@@ -13,12 +13,18 @@ city_name=input("Enter your city: ")
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_key}"
 # Make the API request
 response = requests.get(url)
-weather_data=response.json
-print(response)
-print(weather_data)
+weather_data=response.json()
 
 
+# Accessing and printing specific weather data
+city_name = weather_data['name']
+temperature = weather_data['main']['temp']
+humidity = weather_data['main']['humidity']
+description = weather_data['weather'][0]['description']
 
+print("City:", city_name)
+print("Temperature:", temperature)
+print("Humidity:", humidity)
+print("Description:", description)
 
-    
 
