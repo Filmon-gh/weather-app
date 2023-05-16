@@ -6,6 +6,7 @@ from tkinter import *  # Import the tkinter module for GUI
 from datetime import datetime  # Import the datetime module for working with dates and times
 
 
+
 API_key="6112a97c554eb760c42d9012cfc32ad6"
 
 # Function to retrieve weather data from the OpenWeatherMap API for a given city name
@@ -28,6 +29,18 @@ def display_weather_data(weather_data):
     print(f"Humidity: {humidity}%")
     print(f"Description: {description}")
     print(f"Wind Speed: {wind_speed} m/s")
+
+    # Additional if-else statements for diverse weather conditions
+    if 'rain' in description.lower():
+        print("\nRemember to bring an umbrella!\n")
+    elif 'cloud' in description.lower():
+        print("\nIt's a cloudy day.\n")
+    elif temperature_celsius > 25:
+        print("\nIt's hot outside. Stay hydrated!\n")
+    elif temperature_celsius < 5:
+        print("\nIt's cold outside. Bundle up!\n")
+    else:
+        print("\nEnjoy the weather!\n")
 
 
 city_name = input("Enter your city: ") # Prompt the user to enter their desired city name
