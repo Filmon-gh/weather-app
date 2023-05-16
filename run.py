@@ -16,15 +16,18 @@ response = requests.get(url)
 weather_data=response.json()
 
 
-# Accessing and printing specific weather data
-city_name = weather_data['name']
-temperature = weather_data['main']['temp']
+# Accessing specific weather data
+temperature_kelvin = weather_data['main']['temp']
+temperature_celsius = temperature_kelvin - 273.15
 humidity = weather_data['main']['humidity']
 description = weather_data['weather'][0]['description']
+wind_speed = weather_data['wind']['speed']
 
-print("City:", city_name)
-print("Temperature:", temperature)
-print("Humidity:", humidity)
-print("Description:", description)
+# Printing weather data using f-strings
+print(f"City: {city_name}")
+print(f"Temperature: {temperature_celsius:.2f} °C")
+print(f"Humidity: {humidity}%")
+print(f"Description: {description}")
+print(f"Wind Speed: {wind_speed} m/s")
 
 
