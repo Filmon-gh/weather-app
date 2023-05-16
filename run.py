@@ -17,6 +17,8 @@ def get_weather_data(city_name):
 
 def display_weather_data(weather_data):
     if 'cod' in weather_data and weather_data['cod'] != 200:
+        # If the 'cod' key is present in weather_data and its value is not 200
+    # (indicating an error response from the API)
         print(f"Error: {weather_data['message']}")
     else:
         try:
