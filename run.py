@@ -2,7 +2,6 @@
 import requests  # Import the requests module for making HTTP requests
 import json  # Import the json module for working with JSON data
 import time
-from tkinter import *  # Import the tkinter module for GUI
 from datetime import datetime  # Import the datetime module for working with dates and times
 
 
@@ -18,8 +17,24 @@ def get_weather_data(city_name):
     }
     response = requests.get(API_URL, params=params)
     return response.json()
-        
 
+ # Accessing specific weather data
+def get_specific_weather_data(weather_data):
+    temperature_kelvin = weather_data['main']['temp']
+    temperature_celsius = temperature_kelvin - 273.15
+    humidity = weather_data['main']['humidity']
+    description = weather_data['weather'][0]['description']
+    wind_speed = weather_data['wind']['speed']
+    
+    weather_info = {
+        'Temperature': f"{temperature_celsius:.2f} °C",
+        'Humidity': f"{humidity}%",
+        'Description': description,
+        'Wind Speed': f"{wind_speed} m/s"
+    }
+    
+    return weather_info
+    
 def display_weather_data(weather_data, city_name):
     if 'cod' in weather_data and weather_data['cod'] != 200:
         # If the 'cod' key is present in weather_data and its value is not 200
@@ -27,33 +42,22 @@ def display_weather_data(weather_data, city_name):
         print(f"Error: {weather_data['message']}")
     else:
         try:
-            
-            # Accessing specific weather data
-            temperature_kelvin = weather_data['main']['temp']
-            temperature_celsius = temperature_kelvin - 273.15
-            humidity = weather_data['main']['humidity']
-            description = weather_data['weather'][0]['description']
-            wind_speed = weather_data['wind']['speed']
-        
-            # Get the current date
+            weather_info = get_specific_weather_data(weather_data)
             current_date = datetime.now().strftime('%Y-%m-%d')
-
-            # Printing weather data using f-strings
+            
             print(f"City: {city_name}")
             print(f"Date: {current_date}")
-            print(f"Temperature: {temperature_celsius:.2f} °C")
-            print(f"Humidity: {humidity}%")
-            print(f"Description: {description}")
-            print(f"Wind Speed: {wind_speed} m/s")
-
-            # Additional if-else statements for diverse weather conditions
-            if 'rain' in description.lower():
+            
+            for key, value in weather_info.items():
+                print(f"{key}: {value}")
+            
+            if 'rain' in weather_info['Description'].lower():
                 print("\nRemember to bring an umbrella!\n")
-            elif 'cloud' in description.lower():
+            elif 'cloud' in weather_info['Description'].lower():
                 print("\nIt's a cloudy day.\n")
-            elif temperature_celsius > 25:
+            elif float(weather_info['Temperature'].split()[0]) > 25:
                 print("\nIt's hot outside. Stay hydrated!\n")
-            elif temperature_celsius < 5:
+            elif float(weather_info['Temperature'].split()[0]) < 5:
                 print("\nIt's cold outside. Bundle up!\n")
             else:
                 print("\nEnjoy the weather!\n")
@@ -71,7 +75,7 @@ def retrieve_weather_data():
         if option.lower() == 'q':
             break
         if not option.strip():
-            print("please enter a valid city")
+            print("Please enter a valid city")
             continue
         city_name = option
         weather_data = get_weather_data(city_name)
