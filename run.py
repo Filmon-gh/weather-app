@@ -42,6 +42,7 @@ class WeatherApp:
 
     def print_weather_data(self, weather_info, city_name):
         # Prints the weather data for the given city
+        current_date = datetime.now().strftime('%Y-%m-%d')
         print(f"City: {city_name}")
         print(f"Date: {datetime.now().strftime('%Y-%m-%d')}")
 
@@ -75,7 +76,6 @@ class WeatherApp:
         else:
             try:
                 weather_info = self.get_specific_weather_data(weather_data)
-                current_date = datetime.now().strftime('%Y-%m-%d')
                 self.print_weather_data(weather_info, city_name)
             except KeyError:
                 print("Invalid weather data. Unable to display.")
