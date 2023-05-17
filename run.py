@@ -15,13 +15,14 @@ def get_weather_data(city_name):
     response = requests.get(url)
     return response.json()
 
-def display_weather_data(weather_data):
+def display_weather_data(weather_data, city_name):
     if 'cod' in weather_data and weather_data['cod'] != 200:
         # If the 'cod' key is present in weather_data and its value is not 200
     # (indicating an error response from the API)
         print(f"Error: {weather_data['message']}")
     else:
         try:
+            
             # Accessing specific weather data
             temperature_kelvin = weather_data['main']['temp']
             temperature_celsius = temperature_kelvin - 273.15
@@ -56,18 +57,22 @@ def display_weather_data(weather_data):
             
 
 
-city_name = input("Enter your city: ") # Prompt the user to enter their desired city name
-weather_data = get_weather_data(city_name) # Retrieve the weather data for the specified city
-display_weather_data(weather_data) # Display the weather data on the console
-
 # Continuously prompts the user to enter a new city name and retrieves and displays the weather data for the entered city.
 # The loop continues until the user enters 'q' to quit.q
 
-while True:
-    option = input("Enter a new city (or 'q' to quit): ")
-    if option.lower() == 'q':
-        break
-    city_name = option
-    weather_data = get_weather_data(city_name)
-    display_weather_data(weather_data)
+def retrieve_weather_data():
+    while True:
+        option = input("Enter a new city (or 'q' to quit): ")
+        if option.lower() == 'q':
+            break
+        city_name = option
+        weather_data = get_weather_data(city_name)
+        display_weather_data(weather_data, city_name)
+
+if __name__ == '__main__':
+    retrieve_weather_data()
+
+
+
+
 
