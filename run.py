@@ -58,12 +58,18 @@ def print_weather_data(weather_info, city_name):
     else:
         print("\nEnjoy the weather!\n")
 
+# Function to print error message
+def print_error_message(error_message):
+    if error_message == 'city not found':
+        print("Error: City not found. Please enter a valid city name.")
+    else:
+        print(f"Error: {error_message}")
 
 def display_weather_data(weather_data, city_name):
     if 'cod' in weather_data and weather_data['cod'] != 200:
         # If the 'cod' key is present in weather_data and its value is not 200
         # (indicating an error response from the API)
-        print(f"Error: {weather_data['message']}")
+         print_error_message(weather_data['message'])
     else:
         try:
             weather_info = get_specific_weather_data(weather_data)
