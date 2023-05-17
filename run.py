@@ -7,13 +7,18 @@ from datetime import datetime  # Import the datetime module for working with dat
 
 
 
-API_key="6112a97c554eb760c42d9012cfc32ad6"
+API_KEY="6112a97c554eb760c42d9012cfc32ad6"
+API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 # Function to retrieve weather data from the OpenWeatherMap API for a given city name
 def get_weather_data(city_name):
-    url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_key}"
-    response = requests.get(url)
+    params = {
+        'q': city_name,
+        'appid': API_KEY
+    }
+    response = requests.get(API_URL, params=params)
     return response.json()
+        
 
 def display_weather_data(weather_data, city_name):
     if 'cod' in weather_data and weather_data['cod'] != 200:
