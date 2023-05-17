@@ -65,6 +65,9 @@ def retrieve_weather_data():
         option = input("Enter a new city (or 'q' to quit): ")
         if option.lower() == 'q':
             break
+        if not option.strip():
+            print("please enter a valid city")
+            continue
         city_name = option
         weather_data = get_weather_data(city_name)
         display_weather_data(weather_data, city_name)
