@@ -1,7 +1,6 @@
 # Import the required modules
 import requests  # Import the requests module for making HTTP requests
 import json  # Import the json module for working with JSON data
-import time
 from datetime import datetime  # Import the datetime module for working with dates and times
 
 
@@ -39,16 +38,15 @@ class WeatherApp:
         }
 
         return weather_info
-
+        
     def print_weather_data(self, weather_info, city_name):
         # Prints the weather data for the given city
         current_date = datetime.now().strftime('%Y-%m-%d')
         print(f"City: {city_name}")
-        print(f"Date: {datetime.now().strftime('%Y-%m-%d')}")
+        print(f"Date: {datetime.now().strftime('%Y-%m-%d')}\n")
 
         for key, value in weather_info.items():
             print(f"{key}: {value}")
-
         description = weather_info['Description'].lower()
 
         if 'rain' in description:
@@ -68,7 +66,8 @@ class WeatherApp:
             print("Error: City not found. Please enter a valid city name.")
         else:
             print(f"Error: {error_message}")
-
+   
+        
     def display_weather_data(self, weather_data, city_name):
         # Displays the weather data for the given city
         if 'cod' in weather_data and weather_data['cod'] != 200:
@@ -83,7 +82,7 @@ class WeatherApp:
     def retrieve_weather_data(self):
         # Retrieves and displays weather data for the user-entered city names
         while True:
-            option = input("Enter a new city (or 'q' to quit): ")
+            option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 break
             if not option.strip():
