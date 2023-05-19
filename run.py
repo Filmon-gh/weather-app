@@ -63,6 +63,8 @@ class WeatherApp:
         else:
             print("\nEnjoy the weather!\n")
 
+        print("-" * 40)  # Add a dashed line separator    
+
     def print_error_message(self, error_message):
         # Prints error messages based on the error response from the API
         if error_message == 'city not found':
@@ -82,6 +84,12 @@ class WeatherApp:
                 print("Invalid weather data. Unable to display.")
 
     def retrieve_weather_data(self):
+        print("Welcome to the Weather App!")
+        print("This app provides current weather information for a given city.")
+        print("Enter the name of a city to get its current weather information.")
+        print("Enter 'q' to quit the application.")
+        print("-" * 40)  # Add a dashed line separator
+        
         # Prompts the user to enter a new city or 'q' to quit
         while True:
             option = input("Enter a new city (or 'q' to quit):\n")
