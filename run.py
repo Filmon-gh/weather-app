@@ -1,7 +1,9 @@
 # Import the required modules
 import requests  # Import the requests module for making HTTP requests
 import json  # Import the json module for working with JSON data
-from datetime import datetime  # Import the datetime module for working with dates and times
+from datetime import (
+    datetime
+)  # Import the datetime module for working with dates and times
 
 
 class WeatherApp:
@@ -14,7 +16,10 @@ class WeatherApp:
         self.api_key = api_key
 
     def get_weather_data(self, city_name):
-        # Retrieves weather data from the OpenWeatherMap API for the given city name
+        """
+        Retrieves weather data from the OpenWeatherMap API
+        for the given city name
+        """
         params = {
             'q': city_name,
             'appid': self.api_key
@@ -38,7 +43,7 @@ class WeatherApp:
         }
 
         return weather_info
-        
+
     def print_weather_data(self, weather_info, city_name):
         # Prints the weather data for the given city
         current_date = datetime.now().strftime('%Y-%m-%d')
@@ -66,8 +71,7 @@ class WeatherApp:
             print("Error: City not found. Please enter a valid city name.")
         else:
             print(f"Error: {error_message}")
-   
-        
+
     def display_weather_data(self, weather_data, city_name):
         # Displays the weather data for the given city
         if 'cod' in weather_data and weather_data['cod'] != 200:
