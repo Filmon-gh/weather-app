@@ -85,19 +85,21 @@ class WeatherApp:
 
     def retrieve_weather_data(self):
         print("Welcome to the Weather App!")
+        margin = (50 - len(welcome_message)) // 2  # Calculate the margin for center alignment
+        print(" " * margin + welcome_message)  # Print the centered message
         print()  # Add an empty print statement for the space
         print("This app provides current weather information for a given city.")
         print("Enter the name of a city to get its current weather information.")
         print("Enter 'q' to quit the application.")
         print()  # Add an empty print statement for the space
-        print("-" * 40)  # Add a dashed line separator
+        print("-" * 50)  # Add a dashed line separator
         
         # Prompts the user to enter a new city or 'q' to quit
         while True:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 print("Quitting the application...")
-                print("-" * 60)  # Add a dashed line separator
+                print("-" * 50)  # Add a dashed line separator
                 return  # Exit the method and return to the main part of the application   
             option = option.strip()  # Remove leading and trailing space
             if not option.strip():
