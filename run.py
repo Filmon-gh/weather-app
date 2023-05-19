@@ -84,7 +84,7 @@ class WeatherApp:
                 print("Invalid weather data. Unable to display.")
 
     def retrieve_weather_data(self):
-        print("Welcome to the Weather App!")
+        welcome_message = "Welcome to the Weather App!"  # Define the welcome message
         margin = (50 - len(welcome_message)) // 2  # Calculate the margin for center alignment
         print(" " * margin + welcome_message)  # Print the centered message
         print()  # Add an empty print statement for the space
