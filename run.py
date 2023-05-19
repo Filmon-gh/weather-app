@@ -1,7 +1,7 @@
 # Import the required modules
-import requests  # Import the requests module for making HTTP requests
-import json  # Import the json module for working with JSON data
-from datetime import datetime  # Import the datetime module
+import requests  
+import json  
+from datetime import datetime  
 
 
 class WeatherApp:
