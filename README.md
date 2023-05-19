@@ -55,7 +55,7 @@ The app handles errors gracefully, such as when a city is not found or when ther
 ![App Screenshot]()
 
 ## User Interaction: 
- <img src="https://raw.githubusercontent.com/Filmon-gh/Delicous-Restuarant/49a745e4a1e8cf8c61fd871f8e18a06d78f0764a/screenshots/screenshotimge/7.%20menu.JPG"  height="600" width="500" /> 
+ <img src=""  height="600" width="500" /> 
 
 - The app allows users to enter new city names to retrieve and display weather data. It provides the option to quit the application by entering 'q'. 
  
