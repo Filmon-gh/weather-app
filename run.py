@@ -85,9 +85,11 @@ class WeatherApp:
 
     def retrieve_weather_data(self):
         print("Welcome to the Weather App!")
+        print()  # Add an empty print statement for the space
         print("This app provides current weather information for a given city.")
         print("Enter the name of a city to get its current weather information.")
         print("Enter 'q' to quit the application.")
+        print()  # Add an empty print statement for the space
         print("-" * 40)  # Add a dashed line separator
         
         # Prompts the user to enter a new city or 'q' to quit
