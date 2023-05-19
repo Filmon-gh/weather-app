@@ -87,6 +87,7 @@ class WeatherApp:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 break
+            option = option.strip()  # Remove leading and trailing space
             if not option.strip():
                 print("Please enter a valid city")
                 continue
