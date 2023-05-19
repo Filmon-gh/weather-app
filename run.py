@@ -1,9 +1,7 @@
 # Import the required modules
 import requests  # Import the requests module for making HTTP requests
 import json  # Import the json module for working with JSON data
-from datetime import (
-    datetime
-)  # Import the datetime module for working with dates and times
+from datetime import datetime  # Import the datetime module
 
 
 class WeatherApp:
@@ -73,7 +71,15 @@ class WeatherApp:
             print(f"Error: {error_message}")
 
     def display_weather_data(self, weather_data, city_name):
-        # Displays the weather data for the given city
+        """
+        Displays the weather data for the given city.
+
+        If the weather data retrieval is successful (status code 200),
+        it extracts specific weather information and calls the
+        print_weather_data function to print the weather information.
+        If an error occurs, it calls the print_error_message function
+        to display the corresponding error message.
+        """
         if 'cod' in weather_data and weather_data['cod'] != 200:
             self.print_error_message(weather_data['message'])
         else:
@@ -84,7 +90,7 @@ class WeatherApp:
                 print("Invalid weather data. Unable to display.")
 
     def retrieve_weather_data(self):
-        # Retrieves and displays weather data for the user-entered city names
+        # Prompts the user to enter a new city or 'q' to quit
         while True:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
