@@ -71,15 +71,7 @@ class WeatherApp:
             print(f"Error: {error_message}")
 
     def display_weather_data(self, weather_data, city_name):
-        """
-        Displays the weather data for the given city.
-
-        If the weather data retrieval is successful (status code 200),
-        it extracts specific weather information and calls the
-        print_weather_data function to print the weather information.
-        If an error occurs, it calls the print_error_message function
-        to display the corresponding error message.
-        """
+        # Displays the weather data for the given city
         if 'cod' in weather_data and weather_data['cod'] != 200:
             self.print_error_message(weather_data['message'])
         else:
