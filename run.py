@@ -45,7 +45,7 @@ class WeatherApp:
     def print_weather_data(self, weather_info, city_name):
         # Prints the weather data for the given city
         current_date = datetime.now().strftime('%Y-%m-%d')
-        print(f"City: {city_name}")
+        print(f"\nCity: {city_name}")
         print(f"Date: {datetime.now().strftime('%Y-%m-%d')}\n")
 
         for key, value in weather_info.items():
@@ -97,7 +97,7 @@ class WeatherApp:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 print("Quitting the application...")
-                print("-" * 40)  # Add a dashed line separator
+                print("-" * 60)  # Add a dashed line separator
                 return  # Exit the method and return to the main part of the application   
             option = option.strip()  # Remove leading and trailing space
             if not option.strip():
