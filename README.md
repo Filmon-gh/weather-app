@@ -6,7 +6,7 @@ The Weather App is a Python application that retrieves and displays weather data
 <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0077498c80be08bcf2fca9ca9591eb1c47382340/screen-shots/display.png" /> 
 
 ### How It Works
-The Weather App interacts with the OpenWeatherMap API to retrieve weather data for specific cities. Users enter the names of cities through the app's interface, and the app makes API requests to fetch the corresponding weather information. The retrieved data is then displayed in a user-friendly format, providing users with a snapshot of the current weather conditions for their desired cities
+The Weather App interacts with the OpenWeatherMap API to retrieve weather data for specific cities. Users enter the names of cities through the app's interface, and the app makes API requests to fetch the corresponding weather information. The retrieved data is then displayed in a user-friendly format, providing users with a snapshot of the current weather conditions for their desired cities.
 
 # User stories
  The User Stories section highlights scenarios where the Weather App proves beneficial to its users
