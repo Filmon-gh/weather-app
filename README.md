@@ -25,14 +25,14 @@ The Weather App is a Python application that retrieves and displays weather data
 
 ## Dynamic User Interface:
 
-<img src=""  height="" width="" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/b84835eecae4ed02ea379eb96bf5cfb97a4e6c31/screen-shots/welcome.png"  height="" width="" /> 
 
 -  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
 
 
 ## City-specific Weather Information:
 
-<img src=""  height="" width="" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/b84835eecae4ed02ea379eb96bf5cfb97a4e6c31/screen-shots/body.png"  height="" width="" /> 
 
 - The app retrieves weather data from the OpenWeatherMap API based on the user-entered city name.
 - Enter the name of a city to get its current weather data, including temperature, humidity, description, and wind speed.
@@ -42,7 +42,6 @@ The Weather App is a Python application that retrieves and displays weather data
 
   The app prints the retrieved weather data, including the city name, date, temperature, humidity, description, and wind speed.
 
-<img src=""  height="" width="" /> 
 
 ## Weather Conditions: 
  <img src=""  height=""/> 
@@ -50,14 +49,14 @@ The Weather App is a Python application that retrieves and displays weather data
 The app provides additional information based on the weather conditions. It prompts reminders for bringing an umbrella in case of rain, mentions if it's a cloudy day, advises staying hydrated if it's hot outside, suggests bundling up in cold weather, and encourages enjoying the weather otherwise.
 
 ## User Interaction: 
- <img src=""  height="" width="5" /> 
+ <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/b84835eecae4ed02ea379eb96bf5cfb97a4e6c31/screen-shots/quit.png"  height="" width="5" /> 
 
 - The app allows users to enter new city names to retrieve and display weather data. It provides the option to quit the application by entering 'q'. 
  
 ## Error Handling:
 The app handles errors smoothly, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
 
-<img src=""  height="" width="" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/35160bab21544593a8e2c28b00d6403c95efcd89/screen-shots/error.png"  height="" width="" /> 
 
 
  
