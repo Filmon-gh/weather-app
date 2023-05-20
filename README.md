@@ -23,6 +23,13 @@ The Weather App is a Python application that retrieves and displays weather data
 
 # Features
 
+## Dynamic User Interface:
+
+![App Screenshot]()
+
+-  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
+
+
 ## Weather Data Retrieval: 
 
 ![App Screenshot]()

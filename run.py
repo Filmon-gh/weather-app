@@ -92,14 +92,14 @@ class WeatherApp:
         print("Enter the name of a city to get its current weather information.")
         print("Enter 'q' to quit the application.")
         print()  # Add an empty print statement for the space
-        print("-" * 50)  # Add a dashed line separator
+        print("-" * 65)  # Add a dashed line separator
         
         # Prompts the user to enter a new city or 'q' to quit
         while True:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 print("Quitting the application...")
-                print("-" * 50)  # Add a dashed line separator
+                print("-" * 60)  # Add a dashed line separator
                 return  # Exit the method and return to the main part of the application   
             option = option.strip()  # Remove leading and trailing space
             if not option.strip():
