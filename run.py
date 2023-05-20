@@ -84,15 +84,19 @@ class WeatherApp:
                 print("Invalid weather data. Unable to display.")
 
     def retrieve_weather_data(self):
-        welcome_message = "Welcome to the Weather App!"  # Define the welcome message
-        margin = (50 - len(welcome_message)) // 2  # Calculate the margin for center alignment
-        print(" " * margin + welcome_message)  # Print the centered message
-        print()  # Add an empty print statement for the space
+        """
+        Displays a welcome message and provides instructions for using the Weather App.
+
+        """
+        welcome_message = "Welcome to the Weather App!"  
+        margin = (50 - len(welcome_message)) // 2  
+        print(" " * margin + welcome_message) 
+        print()  
         print("This app provides current weather information for a given city.")
         print("Enter the name of a city to get its current weather information.")
         print("Enter 'q' to quit the application.")
-        print()  # Add an empty print statement for the space
-        print("-" * 65)  # Add a dashed line separator
+        print()  
+        print("-" * 65)  
         
         # Prompts the user to enter a new city or 'q' to quit
         while True:
