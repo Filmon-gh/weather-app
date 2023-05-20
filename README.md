@@ -3,7 +3,7 @@
 The Weather App is a Python application that retrieves and displays weather data for user-entered city names. It utilizes the OpenWeatherMap API to fetch weather information such as temperature, humidity, description, and wind speed for the specified city.
  
 
-<img src=""  width="900" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0077498c80be08bcf2fca9ca9591eb1c47382340/screen-shots/display.png"  width="" /> 
 
 ## User stories
  The following user stories have been identified: 
