@@ -1,7 +1,7 @@
 # Import the required modules
-import requests  
-import json  
-from datetime import datetime  
+import requests
+import json
+from datetime import datetime
 
 
 class WeatherApp:
@@ -63,7 +63,7 @@ class WeatherApp:
         else:
             print("\nEnjoy the weather!\n")
 
-        print("-" * 40)  # Add a dashed line separator    
+        print("-" * 40)
 
     def print_error_message(self, error_message):
         # Prints error messages based on the error response from the API
@@ -73,7 +73,10 @@ class WeatherApp:
             print(f"Error: {error_message}")
 
     def display_weather_data(self, weather_data, city_name):
-        # Displays the weather data for the given city
+        """
+        Handles errors in the weather data response and
+        displays the weather information for the given city.
+        """
         if 'cod' in weather_data and weather_data['cod'] != 200:
             self.print_error_message(weather_data['message'])
         else:
@@ -85,27 +88,27 @@ class WeatherApp:
 
     def retrieve_weather_data(self):
         """
-        Displays a welcome message and provides instructions for using the Weather App.
-
+        Displays a welcome message and handles user interaction,
+        input validation, and calling the necessary functions
+        to retrieve and display weather data.
         """
-        welcome_message = "Welcome to the Weather App!"  
-        margin = (50 - len(welcome_message)) // 2  
-        print(" " * margin + welcome_message) 
-        print()  
-        print("This app provides current weather information for a given city.")
-        print("Enter the name of a city to get its current weather information.")
+        welcome_message = "Welcome to the Weather App!"
+        margin = (50 - len(welcome_message)) // 2
+        print(" " * margin + welcome_message)
+        print()
+        print("Weather App provides current weather information for a city.")
+        print("Enter a city to get its current weather information.")
         print("Enter 'q' to quit the application.")
-        print()  
-        print("-" * 65)  
-        
-        # Prompts the user to enter a new city or 'q' to quit
+        print()
+        print("-" * 65)
+
         while True:
             option = input("Enter a new city (or 'q' to quit):\n")
             if option.lower() == 'q':
                 print("Quitting the application...")
-                print("-" * 60)  # Add a dashed line separator
-                return  # Exit the method and return to the main part of the application   
-            option = option.strip()  # Remove leading and trailing space
+                print("-" * 60)
+                return
+            option = option.strip()
             if not option.strip():
                 print("Please enter a valid city")
                 continue
