@@ -25,7 +25,7 @@ The Weather App is a Python application that retrieves and displays weather data
 
 ## Dynamic User Interface:
 
-   <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0056af2e88be1a19e4ac3e0f87ffdcd5eb50ef7c/screen-shots/welcome.png"/> 
+   <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/41cf75733da5cc7f14c697c83f56a2144b3b6d1d/screen-shots/welcome.png"/> 
 
 -  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
 
@@ -130,4 +130,15 @@ if not option.strip():
 
 
 ## Credits 
-  
+
+I learned about the implementation and understanding of weather app codes, as well as retrieving data from the weather API, from the following sources:
+
+AskPython: "GUI Weather App in Python" (Website) Link: https://www.askpython.com/python/examples/gui-weather-app-in-python
+The code and concepts presented in this AskPython tutorial greatly contributed to the development of this weather app. It provided valuable insights into the process of retrieving data from a weather API.
+
+YouTube: "Creating a Weather App in Python" (Video) Link: https://www.youtube.com/watch?v=7JoMTQgdxg0
+The YouTube tutorial on creating a weather app in Python offered additional guidance and practical examples for implementing weather-related functionality. It assisted in understanding key concepts, such as making HTTP requests to an API and extracting specific weather data.
+
+In addition, this weather app utilizes the OpenWeatherMap API (https://openweathermap.org) to retrieve current weather data for a given city. The OpenWeatherMap API provides comprehensive weather information, including temperature, humidity, description, and wind speed, which are displayed within the app's user interface.
+
+By combining the knowledge gained from these resources and leveraging the OpenWeatherMap API, I was able to develop this weather app and adapt it to suit my specific requirements. 
