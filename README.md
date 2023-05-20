@@ -25,46 +25,41 @@ The Weather App is a Python application that retrieves and displays weather data
 
 ## Dynamic User Interface:
 
-![App Screenshot]()
+<img src=""  height="" width="" /> 
 
 -  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
 
 
-## Weather Data Retrieval: 
+## City-specific Weather Information:
 
-![App Screenshot]()
+<img src=""  height="" width="" /> 
 
 - The app retrieves weather data from the OpenWeatherMap API based on the user-entered city name.
-
-
-## Specific Weather Data:
-
-![App Screenshot]()
-- The app extracts specific weather information from the API response, including temperature, humidity, description, and wind speed. 
-
+- Enter the name of a city to get its current weather data, including temperature, humidity, description, and wind speed.
 
 
 ## Print Weather Data:
 
-  The app prints the retrieved weather data, including the city name, date, temperature, humidity, description, and wind speed 
+  The app prints the retrieved weather data, including the city name, date, temperature, humidity, description, and wind speed.
 
-![App Screenshot]()
+<img src=""  height="" width="" /> 
 
-## Additional Weather Information:
-
- <img src=""  height="250"/> 
+## Weather Conditions: 
+ <img src=""  height=""/> 
 
 The app provides additional information based on the weather conditions. It prompts reminders for bringing an umbrella in case of rain, mentions if it's a cloudy day, advises staying hydrated if it's hot outside, suggests bundling up in cold weather, and encourages enjoying the weather otherwise.
+
+## User Interaction: 
+ <img src=""  height="" width="5" /> 
+
+- The app allows users to enter new city names to retrieve and display weather data. It provides the option to quit the application by entering 'q'. 
  
 ## Error Handling:
 The app handles errors gracefully, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
 
-![App Screenshot]()
+<img src=""  height="" width="" /> 
 
-## User Interaction: 
- <img src=""  height="600" width="500" /> 
 
-- The app allows users to enter new city names to retrieve and display weather data. It provides the option to quit the application by entering 'q'. 
  
 
 ## Features to be added in the future
@@ -75,8 +70,21 @@ The app handles errors gracefully, such as when a city is not found or when ther
 
 ## Technology Used: 
 
- - GitHub: The project hosted on GitHub, a web-based hosting service for version control using Git. 
+ This project utilizes the following technologies:
 
+ - Python: The Weather App is written in Python, leveraging its simplicity and versatility.
+
+ - requests: The requests library is used to make HTTP requests to the OpenWeatherMap API and retrieve weather data.
+
+ - JSON: JSON (JavaScript Object Notation) is used to handle weather data responses from the OpenWeatherMap API. The json module is imported to work with JSON data.
+
+ - datetime: The datetime module is used to handle date and time operations, such as getting the current date.
+
+ - CodeAnywhere: CodeAnywhere, a cloud-based integrated development environment (IDE), was used for coding and development of the Weather App.
+
+ - GitHub: GitHub, a web-based version control repository hosting service, was utilized for storing and managing the code repository. 
+
+ - Heroku: The Weather App is deployed to Heroku, which provides an environment to host the app and make it accessible online.
  
 ## Testing 
 
@@ -93,7 +101,7 @@ The Weather App has been tested using both manual and automated testing approach
 
 
 
- <img src="" height="250"/> 
+ <img src="" height=""/> 
 
 
 
