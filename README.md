@@ -25,7 +25,7 @@ The Weather App is a Python application that retrieves and displays weather data
 
 ## Dynamic User Interface:
 
-   <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/b84835eecae4ed02ea379eb96bf5cfb97a4e6c31/screen-shots/welcome.png" /> 
+   <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0056af2e88be1a19e4ac3e0f87ffdcd5eb50ef7c/screen-shots/welcome.png"/> 
 
 -  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
 
@@ -43,12 +43,24 @@ The Weather App is a Python application that retrieves and displays weather data
  
 The app provides additional information based on the weather conditions. It prompts reminders for bringing an umbrella in case of rain, mentions if it's a cloudy day, advises staying hydrated if it's hot outside, suggests bundling up in cold weather, and encourages enjoying the weather otherwise.
   
-## Error Handling:
+### Error Handling:
 The app handles errors smoothly, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/35160bab21544593a8e2c28b00d6403c95efcd89/screen-shots/error.png"  height="" width="" /> 
+### Invalid City Input
 
+When a user enters a wrong city name or keyword, the Weather App detects this and displays an error message to inform the user about the invalid input. The error message clearly states that the entered city is not found and prompts the user to enter a valid city name.
 
+Example Error Message:
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/35160bab21544593a8e2c28b00d6403c95efcd89/screen-shots/error.png" /> 
+
+### Empty Input
+
+To prevent the app from processing empty input (blank spaces or pressing enter without providing a city name), special error handling has been implemented. When the user enters empty input, the app detects it and displays an appropriate error message, prompting the user to enter a valid city name.
+
+Example Error Message:
+
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/bbdefc8ce72e669ddff1c2a187da404a7a39386f/screen-shots/error2.png"/>
 
 ## Features to be added in the future
  - Forecast Information: Extend the app to retrieve and display weather forecasts for multiple days instead of just the current weather. Users can get a better understanding of the weather conditions over a specific period.
