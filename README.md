@@ -55,7 +55,7 @@ The app provides additional information based on the weather conditions. It prom
 - The app allows users to enter new city names to retrieve and display weather data. It provides the option to quit the application by entering 'q'. 
  
 ## Error Handling:
-The app handles errors gracefully, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
+The app handles errors smoothly, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
 
 <img src=""  height="" width="" /> 
 
@@ -66,7 +66,7 @@ The app handles errors gracefully, such as when a city is not found or when ther
  - Forecast Information: Extend the app to retrieve and display weather forecasts for multiple days instead of just the current weather. Users can get a better understanding of the weather conditions over a specific period.
  - Temperature Conversion: The app could provide an option for users to choose between Celsius and Fahrenheit temperature units for displaying the weather information.
  - Graphical Visualization: Incorporate graphical visualization of weather data using charts or graphs. This feature provides users with a visual representation of temperature variations, humidity levels, or wind speeds over a specific period, improving data interpretation.
- - Multiple Cities: Enhance the app to support retrieving and displaying weather data for multiple cities at once. Users can enter a list of cities separated by commas to get weather information for each city in a consolidated output.
+ 
 
 ## Technology Used: 
 
@@ -90,7 +90,8 @@ The app handles errors gracefully, such as when a city is not found or when ther
 
 The Weather App has been tested using both manual and automated testing approaches to ensure its functionality and accuracy in retrieving and displaying weather data.  
 
- - Input Validation: The application has been tested to validate user input for city names. Various scenarios, including empty input, invalid city names, and valid city names, have been tested to ensure proper error handling and response.
+ - Input Validation: The application has been tested to validate user input for city names. 
+ Various scenarios, including empty input, invalid city names, and valid city names, have been tested to ensure proper error handling and response.
 
  - API Integration: The Weather App has been tested by making requests to the OpenWeatherMap API with different city names to verify the successful retrieval of weather data. The responses have been validated for correctness and adherence to the expected format. 
 
@@ -98,7 +99,22 @@ The Weather App has been tested using both manual and automated testing approach
 
 
 ## Bugs
+The app was experiencing a bug related to user input handling, specifically when users entered blank spaces or pressed enter without providing a city name.The app did not handle this scenario correctly, leading to unexpected behavior and potential errors.
 
+To address the bug where the app did not handle blank spaces or empty input correctly, the following changes were made:
+
+ - Added the option.strip() method to remove leading and trailing whitespace characters from the user's input.
+ - Modified the condition to check if the stripped option is empty or contains only whitespace.
+ - If the condition evaluates to True, an appropriate error message is displayed, prompting the user to enter a valid city name.
+
+The fixed code snippet is as follows:
+ # Remove leading and trailing whitespace characters from the user's input
+option = option.strip()
+
+# Check if the stripped option is empty or contains only whitespace
+if not option.strip():
+    print("Please enter a valid city")
+    continue
 
 
  <img src="" height=""/> 
