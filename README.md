@@ -3,10 +3,13 @@
 The Weather App is a Python application that retrieves and displays weather data for user-entered city names. It utilizes the OpenWeatherMap API to fetch weather information such as temperature, humidity, description, and wind speed for the specified city.
  
 
-<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0077498c80be08bcf2fca9ca9591eb1c47382340/screen-shots/display.png"  width="" /> 
+<img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/0077498c80be08bcf2fca9ca9591eb1c47382340/screen-shots/display.png" /> 
 
-## User stories
- The following user stories have been identified: 
+### How It Works
+The Weather App interacts with the OpenWeatherMap API to retrieve weather data for specific cities. Users enter the names of cities through the app's interface, and the app makes API requests to fetch the corresponding weather information. The retrieved data is then displayed in a user-friendly format, providing users with a snapshot of the current weather conditions for their desired cities
+
+# User stories
+ The User Stories section highlights scenarios where the Weather App proves beneficial to its users
 
 - As a user, I want to be able to enter the name of a city and retrieve the current weather information for that city.
 
@@ -14,21 +17,19 @@ The Weather App is a Python application that retrieves and displays weather data
 
 - As a user, I want the app to provide additional messages based on the weather conditions, such as reminders to bring an umbrella if it's raining or alerts about extreme temperatures.
 
-- As a user, I want the app to handle errors gracefully and provide user-friendly error messages. 
+- As a user, I want the app to handle errors smoothly and provide user-friendly error messages. 
 - As a user, I want the app to display the date of the weather information, so I know how recent it is.
 
 - As a user, I want the app to be fast and responsive, so I can quickly retrieve weather information for different cities.
 
 
-
 # Features
 
-## Dynamic User Interface:
+## User Interface:
 
    <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/41cf75733da5cc7f14c697c83f56a2144b3b6d1d/screen-shots/welcome.png"/> 
 
 -  The app presents a welcoming message and app instructions upon startup, making it easy for users to understand how to interact with the application.
-
 
 ## City-specific Weather Information:
 - The app retrieves weather data from the OpenWeatherMap API based on the user-entered city name.
@@ -43,7 +44,7 @@ The Weather App is a Python application that retrieves and displays weather data
  
 The app provides additional information based on the weather conditions. It prompts reminders for bringing an umbrella in case of rain, mentions if it's a cloudy day, advises staying hydrated if it's hot outside, suggests bundling up in cold weather, and encourages enjoying the weather otherwise.
   
-### Error Handling:
+## Error Handling:
 The app handles errors smoothly, such as when a city is not found or when there are issues with the API response. It displays appropriate error messages to the user.
 
 ### Invalid City Input
@@ -62,7 +63,9 @@ Example Error Message:
 
 <img src="https://raw.githubusercontent.com/Filmon-gh/weather-app-python/bbdefc8ce72e669ddff1c2a187da404a7a39386f/screen-shots/error2.png"/>
 
+
 ## Features to be added in the future
+
  - Forecast Information: Extend the app to retrieve and display weather forecasts for multiple days instead of just the current weather. Users can get a better understanding of the weather conditions over a specific period.
  - Temperature Conversion: The app could provide an option for users to choose between Celsius and Fahrenheit temperature units for displaying the weather information.
  - Graphical Visualization: Incorporate graphical visualization of weather data using charts or graphs. This feature provides users with a visual representation of temperature variations, humidity levels, or wind speeds over a specific period, improving data interpretation.
@@ -86,9 +89,10 @@ Example Error Message:
 
  - Heroku: The Weather App is deployed to Heroku, which provides an environment to host the app and make it accessible online.
  
+
 ## Testing 
 
-The Weather App has been tested using both manual and automated testing approaches to ensure its functionality and accuracy in retrieving and displaying weather data.  
+The Weather App has been tested  to ensure its functionality and accuracy in retrieving and displaying weather data.  
 
  - Input Validation: The application has been tested to validate user input for city names. 
  Various scenarios, including empty input, invalid city names, and valid city names, have been tested to ensure proper error handling and response.
@@ -107,15 +111,6 @@ To address the bug where the app did not handle blank spaces or empty input corr
  - Modified the condition to check if the stripped option is empty or contains only whitespace.
  - If the condition evaluates to True, an appropriate error message is displayed, prompting the user to enter a valid city name.
 
-The fixed code snippet is as follows:
-  - Remove leading and trailing whitespace characters from the user's input
-option = option.strip()
-
- - Check if the stripped option is empty or contains only whitespace
-if not option.strip():
-    print("Please enter a valid city")
-    continue
-
 
 ## Validator Testing
 
@@ -126,8 +121,9 @@ Summary: No Errors Found
 ## Deployment 
 
 This project is deployed to Heroku, a cloud platform that allows for easy deployment and hosting of web applications.
+To deploy the Weather App to Heroku, I performed the following steps:
 
- - Clone the GitHub repository: Clone the Weather App repository from GitHub and ensure the necessary permissions to access the repository.
+  - Clone the GitHub repository: Clone the Weather App repository from GitHub and ensure the necessary permissions to access the repository.
   - Create a Heroku app:
   - Navigate to the "Settings" tab in the Heroku app settings.
            - Locate the "Buildpacks" section.
@@ -135,7 +131,7 @@ This project is deployed to Heroku, a cloud platform that allows for easy deploy
 
   - Link the Heroku app to the repository.
 
- - Deploy to Heroku:
+  - Deploy to Heroku
 
 ## Credits 
 
@@ -151,3 +147,7 @@ The code and concepts presented in this AskPython tutorial provided valuable ins
  - In addition, this weather app utilizes the OpenWeatherMap API (https://openweathermap.org) to retrieve current weather data for a given city. The OpenWeatherMap API provides comprehensive weather information, including temperature, humidity, description, and wind speed, which are displayed within the app's user interface.
 
 By combining the knowledge gained from these resources and leveraging the OpenWeatherMap API, I was able to develop this weather app and adapt it to suit my specific requirements. 
+
+## Acknowledgment
+
+I would like to express my sincere gratitude to Rohit Sharma, my mentor, for his invaluable guidance and support throughout the development of this project. His expertise and insightful feedback have been instrumental in shaping the Weather App and enhancing my understanding of software development.
