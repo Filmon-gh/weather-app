@@ -108,37 +108,46 @@ To address the bug where the app did not handle blank spaces or empty input corr
  - If the condition evaluates to True, an appropriate error message is displayed, prompting the user to enter a valid city name.
 
 The fixed code snippet is as follows:
-  Remove leading and trailing whitespace characters from the user's input
+  - Remove leading and trailing whitespace characters from the user's input
 option = option.strip()
 
- Check if the stripped option is empty or contains only whitespace
+ - Check if the stripped option is empty or contains only whitespace
 if not option.strip():
     print("Please enter a valid city")
     continue
 
 
- <img src="" height=""/> 
-
-
-
-
 ## Validator Testing
 
+Tool: PEP8 
 
+Summary: No Errors Found
 
 ## Deployment 
 
+This project is deployed to Heroku, a cloud platform that allows for easy deployment and hosting of web applications.
+
+ - Clone the GitHub repository: Clone the Weather App repository from GitHub and ensure the necessary permissions to access the repository.
+  - Create a Heroku app:
+  - Navigate to the "Settings" tab in the Heroku app settings.
+           - Locate the "Buildpacks" section.
+            - Add the necessary buildpacks by including the Python buildpack and Node.js buildpack.
+
+  - Link the Heroku app to the repository.
+
+ - Deploy to Heroku:
 
 ## Credits 
 
 I learned about the implementation and understanding of weather app codes, as well as retrieving data from the weather API, from the following sources:
 
-AskPython: "GUI Weather App in Python" (Website) Link: https://www.askpython.com/python/examples/gui-weather-app-in-python
-The code and concepts presented in this AskPython tutorial greatly contributed to the development of this weather app. It provided valuable insights into the process of retrieving data from a weather API.
+ - AskPython: "GUI Weather App in Python" (Website) Link: https://www.askpython.com/python/examples/gui-weather-app-in-python
+The code and concepts presented in this AskPython tutorial provided valuable insights into the process of retrieving data from a weather API.
 
-YouTube: "Creating a Weather App in Python" (Video) Link: https://www.youtube.com/watch?v=7JoMTQgdxg0
-The YouTube tutorial on creating a weather app in Python offered additional guidance and practical examples for implementing weather-related functionality. It assisted in understanding key concepts, such as making HTTP requests to an API and extracting specific weather data.
+ - YouTube: "Creating a Weather App in Python" (Video) Link: https://www.youtube.com/watch?v=7JoMTQgdxg0
+ 
+ The YouTube tutorial on creating a weather app in Python offered additional guidance and practical examples for implementing weather-related functionality. It assisted in understanding key concepts, such as making HTTP requests to an API and extracting specific weather data.
 
-In addition, this weather app utilizes the OpenWeatherMap API (https://openweathermap.org) to retrieve current weather data for a given city. The OpenWeatherMap API provides comprehensive weather information, including temperature, humidity, description, and wind speed, which are displayed within the app's user interface.
+ - In addition, this weather app utilizes the OpenWeatherMap API (https://openweathermap.org) to retrieve current weather data for a given city. The OpenWeatherMap API provides comprehensive weather information, including temperature, humidity, description, and wind speed, which are displayed within the app's user interface.
 
 By combining the knowledge gained from these resources and leveraging the OpenWeatherMap API, I was able to develop this weather app and adapt it to suit my specific requirements. 
